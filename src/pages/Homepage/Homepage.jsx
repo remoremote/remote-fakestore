@@ -3,7 +3,9 @@ import './Homepage.css'
 
 function Homepage() {
   return (
-    <div>Homepage</div>
+    <div>
+      <button>All</button>
+    </div>
   )
 }
 
