@@ -1,0 +1,9 @@
+.homepage-container {
+    min-height: 89.5vh;
+    padding: 48px;
+  }
+
+.prod-container {
+    display: flex;
+    flex-wrap: wrap; 
+}

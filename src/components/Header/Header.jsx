@@ -6,9 +6,9 @@ function Header() {
   return (
     <div className="header-container">
         <p className='store-title'>Fake Store</p>
-        <div>
+        <div className="icon-notification">
             <p className='cart-counter-alert'>1</p>
-            <div className="store-icon"><BiCartAlt /></div>
+            <button className="store-icon"><BiCartAlt /></button>
         </div>
     </div>
   )

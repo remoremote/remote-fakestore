@@ -14,6 +14,13 @@
 
 .store-icon {
     font-size: 32px;
+    border: none;
+    background-color: #ffffff;
+    padding: 0;
+}
+
+.icon-notification:hover {
+    cursor: pointer;
 }
 
 .cart-counter-alert {
