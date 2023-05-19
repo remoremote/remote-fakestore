@@ -5,8 +5,10 @@ import ProductCard from '../../components/ProductCard/ProductCard'
 
 
 function Homepage() {
-  //create state for characters
+  //create state for products
   const [products, setProducts] = useState([]);
+  // State to hold the categories fetched from the API
+  const [categories, setCategories] = useState([])
 
   //https://fakestoreapi.com/products
 
@@ -22,20 +24,35 @@ function Homepage() {
         //store this data in state
         setProducts(res.data)
       })
-      .catch(err => console.log(err)) 
+      .catch(err => console.log(err))
+      
+      //call api to get products
+      axios.get('https://fakestoreapi.com/products/categories')
+      .then(res => {
+        console.log(res.data);
+        setCategories(res.data);
+      })
+      .catch(err => console.log(err));
+
     }, [] //empty array tequired to run ONLY on first render
    )
 
 
   return (
     <div className="homepage-container">
+      <div>
+        {categories.map(category => 
+          <a key={category} className='category-link'>
+            {category}
+          </a>
+        )}
+      </div>
       <div className='prod-container'>
       {
         products.map(item=><ProductCard 
           key={item.id}
           product={item} 
           />)
-        //products.map(item=><p key={item.id}>{item.title}</p>)
       }
       </div>
     </div>

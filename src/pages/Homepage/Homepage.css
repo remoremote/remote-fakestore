@@ -7,3 +7,7 @@
     display: flex;
     flex-wrap: wrap; 
 }
+
+.category-link {
+    margin-left: 16px;
+}

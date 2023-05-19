@@ -3,7 +3,7 @@ import './ProductCard.css'
 
 function ProductCard({product}) {
   //substring to limit amount of characters in title
-  const title = product.title.length > 25 ? product.title.substring(0, 25) + "..." : product.title;
+  const title = product.title.length > 30 ? product.title.substring(0, 30) + "..." : product.title;
 
 
   return (
