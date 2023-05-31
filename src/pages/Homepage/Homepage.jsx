@@ -4,6 +4,7 @@ import './Homepage.css'
 import ProductCard from '../../components/ProductCard/ProductCard'
 
 
+
 function Homepage() {
   //create state for products
   const [products, setProducts] = useState([]);
