@@ -9,14 +9,15 @@
     text-align: left;
     margin: 10px;
     background-color: var(--white);
-  }
+    position: relative;
+}
 
-  .product-card:hover {
+.product-card:hover {
     box-shadow: 0px 2px 8px -4px rgba(29, 29, 29, 0.12), 0px 4px 16px rgba(29, 29, 29, 0.12);
     cursor: pointer;
-  }
+}
   
-  .product-card img {
+.product-card img {
     width: 200px;
     height: 200px;
     border-radius: 5px;
@@ -25,25 +26,50 @@
     margin-bottom: 10px;
     padding: 16px;
     object-fit: contain;
-  }
+}
   
-  .product-card p {
+.product-card p {
     margin: 0;
     word-wrap: break-word;
-  }
+}
   
-  .product-card p:nth-child(2) {
+.product-card p:nth-child(2) {
     font-weight: bold;
     margin-bottom: 5px;
-  }
+}
   
-  .product-card p:nth-child(3) {
+.product-card p:nth-child(3) {
     color: grey;
     margin-bottom: 20px; /* separate price a little more from the rest */
-  }
+}
   
-  .product-card p:nth-child(4) {
+.product-card p:nth-child(4) {
     font-size: 1.4em;
     color: #333;
-  }
+}
+
+
+.product-card-icon {
+    position: absolute;
+    top: 10px; 
+    right: 10px;  
+    padding: 3px 5px;
+    border-radius: 20%;  
+    background: #ebebeb;
+    border: none;
+    cursor: pointer;
+}
   
+.product-card-icon svg {  
+    fill: #333;  
+    width: 18px;  
+    height: 18px;  
+}
+  
+.product-card-icon:hover {
+  background-color: #333;
+}
+
+.product-card-icon svg:hover {  
+  fill: #ebebeb;  
+}

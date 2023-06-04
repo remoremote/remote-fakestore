@@ -9,25 +9,29 @@ import ProductDetails from './pages/ProductDetails/ProductDetails'
 import Checkout from './pages/Checkout/Checkout'
 import Contact from './pages/Contact/Contact'
 import { Link } from 'react-router-dom';
+import { CartContext } from './contexts/CartContext'
+import CartContextProvider from './contexts/CartContext'
+
+ 
 
 
 function App() {
 
   return (
     <BrowserRouter className='app-container'>
-      <Header />
+      <CartContextProvider>
+        <Header />
 
-      <Routes>
-        <Route path='/' element={<Homepage />}/>
-        <Route path='/about' element={<About />}/>
-        <Route path='/details/:productId' element={<ProductDetails />}/>
-        <Route path='/checkout' element={<Checkout />}/>
-        <Route path='/contact' element={<Contact />}/>
-      </Routes>
+        <Routes>
+          <Route path='/' element={<Homepage />}/>
+          <Route path='/about' element={<About />}/>
+          <Route path='/details/:productId' element={<ProductDetails />}/>
+          <Route path='/checkout' element={<Checkout />}/>
+          <Route path='/contact' element={<Contact />}/>
+        </Routes>
 
-      
-
-      <Footer />
+        <Footer />
+      </CartContextProvider>
     </BrowserRouter>
   )
 }

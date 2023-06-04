@@ -1,0 +1,20 @@
+.cart-item {
+    border-bottom: 1px solid #ebebeb;
+}
+
+.cart-item td {
+    padding: 16px;
+}
+
+.cart-item button {
+    font-size: 14px;
+    color: #282828;
+    padding: 8px 16px;
+    background: #FFD814;
+    border-radius: 8px;
+    border: none;
+}
+
+.cart-item button:hover{
+    cursor: pointer;
+}

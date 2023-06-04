@@ -1,0 +1,21 @@
+.cart-container {
+    min-height: 89.5vh;
+    padding: 48px;
+    background-color: #ebebeb;
+}
+
+.cart-container table {
+    max-width: 60vw;
+    margin: 0 auto;
+    width: 100%;
+    background-color: white;
+    border-radius: 8px;
+    padding: 64px;
+}
+
+.cart-container th {
+    font-weight: bold;
+    font-size: 18px;
+    color: #282828;
+    padding: 16px;
+}
