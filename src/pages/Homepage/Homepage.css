@@ -1,6 +1,7 @@
 .homepage-container {
     min-height: 89.5vh;
     padding: 48px;
+    background-color: #ebebeb;
   }
 
 .prod-container {
@@ -8,6 +9,3 @@
     flex-wrap: wrap; 
 }
 
-.category-link {
-    margin-left: 16px;
-}

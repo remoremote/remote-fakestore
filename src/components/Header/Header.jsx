@@ -1,17 +1,19 @@
 import React from 'react'
 import './Header.css'
-import { BiCartAlt } from 'react-icons/bi';
+import { BiCartAlt, BiHeart } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
     <div className="header-container">
         <a href='/' className='store-title'>Fake Store</a>
+      <div>
+          <button className="store-icon"><BiHeart /></button>
         <a href='/checkout' className="icon-notification">
-        <div>
             <p className='cart-counter-alert'>1</p>
             <button className="store-icon"><BiCartAlt /></button>
-        </div>
         </a>
+      </div>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import './Footer.css'
 import { BiDonateHeart } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (

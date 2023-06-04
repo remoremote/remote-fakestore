@@ -1,9 +1,12 @@
 import React from 'react'
 import './CategoryButtons.css'
 
-function CategoryButtons() {
+
+function CategoryButtons({category, onClick}) {
   return (
-    <div>CategoryButtons</div>
+    <div className='category-link' onClick={onClick}>
+        <a>{category}</a>
+    </div>
   )
 }
 
