@@ -41,13 +41,16 @@ function Homepage() {
 
   return (
     <div className="homepage-container">
+      
       <div>
-        {categories.map(category => 
+        {
+        categories.map(category => 
           <a key={category} className='category-link'>
             {category}
-          </a>
-        )}
+          </a>)
+        }
       </div>
+
       <div className='prod-container'>
       {
         products.map(item=><ProductCard 

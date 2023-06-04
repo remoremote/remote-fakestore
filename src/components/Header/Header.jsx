@@ -5,11 +5,13 @@ import { BiCartAlt } from 'react-icons/bi';
 function Header() {
   return (
     <div className="header-container">
-        <p className='store-title'>Fake Store</p>
-        <div className="icon-notification">
+        <a href='/' className='store-title'>Fake Store</a>
+        <a href='/checkout' className="icon-notification">
+        <div>
             <p className='cart-counter-alert'>1</p>
             <button className="store-icon"><BiCartAlt /></button>
         </div>
+        </a>
     </div>
   )
 }

@@ -5,8 +5,8 @@ import { BiDonateHeart } from 'react-icons/bi';
 function Footer() {
   return (
     <div className="footer-container">
-        <p>Made with <BiDonateHeart className='love-icon'/> by <a href="#">remoremote</a></p>
-        <a href="#">Contact Us</a>
+        <p>Made with <BiDonateHeart className='love-icon'/> by <a href="/about">remoremote</a></p>
+        <a href="/contact">Contact Us</a>
     </div>
   )
 }
