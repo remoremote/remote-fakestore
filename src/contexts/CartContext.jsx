@@ -1,10 +1,12 @@
 import { useState, createContext, useEffect } from 'react'
 
-// create context
 export const CartContext = createContext()
 
 export default function CartContextProvider(props) {
-  const [cartItems, setCartItems] = useState([])
+  // Get initial cartItems from localStorage if they exist
+  const initialCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+  const [cartItems, setCartItems] = useState(initialCartItems)
 
   const addProduct = (productToAdd) => {
     setCartItems(prevItems => [...prevItems, productToAdd]);
@@ -14,9 +16,9 @@ export default function CartContextProvider(props) {
     setCartItems(prevItems => prevItems.filter(item => item.id !== productToRemove.id));
   }
 
-  // log cartItems whenever it changes
+  // When cartItems change, update localStorage
   useEffect(() => {
-    console.log(cartItems);
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems])
 
   return (

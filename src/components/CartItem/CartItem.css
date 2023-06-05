@@ -1,9 +1,10 @@
 .cart-item {
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: 1px solid grey;
 }
 
 .cart-item td {
     padding: 16px;
+    justify-content: center;
 }
 
 .cart-item button {
@@ -17,4 +18,14 @@
 
 .cart-item button:hover{
     cursor: pointer;
+}
+
+.image-name {
+    display: flex;
+    align-items: center;
+}
+
+.image-name img {
+    max-width: 100px;
+    margin-right: 16px;
 }

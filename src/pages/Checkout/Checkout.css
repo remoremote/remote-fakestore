@@ -2,6 +2,7 @@
     min-height: 89.5vh;
     padding: 48px;
     background-color: #ebebeb;
+    border: 1px solid black;
 }
 
 .cart-container table {
@@ -18,4 +19,16 @@
     font-size: 18px;
     color: #282828;
     padding: 16px;
+    text-align: left;
+}
+
+th, td {
+    border-bottom: 1px solid black;
+    padding: 0;
+    border-spacing: 0;
+}
+
+
+tr:hover {
+    background-color: #ebebeb;
 }
