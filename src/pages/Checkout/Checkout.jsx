@@ -18,7 +18,8 @@ function Checkout() {
           </tr>
         </thead>
         <tbody>
-          {cartItems.map(item => <CartItem key={item.id} item={item} removeProduct={removeProduct} />)}
+            {/* For each cart item, create a CartItem component with a unique key to avoid error*/}
+            {cartItems.map((item, index) => <CartItem key={`${item.id}-${index}`} item={item} removeProduct={removeProduct} />)}
         </tbody> 
       </table>
     </div>

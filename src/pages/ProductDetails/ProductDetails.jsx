@@ -2,6 +2,7 @@ import React from 'react'
 import './ProductDetails.css'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
+import { CartContext } from '../../contexts/CartContext'; // import the CartContext
 
 function ProductDetails() {
   //show data for a specific product
@@ -12,6 +13,13 @@ function ProductDetails() {
   //create state to hold product data
   const [product, setProduct] = React.useState('')
 
+  //access global context
+  const { addProduct } = React.useContext(CartContext); // get addProduct from context
+
+  //handle add to cart
+  const handleAddToCart = () => {
+    addProduct(product);
+  };
 
   //https://fakestoreapi.com/products/1
   //I need to get the data when the page loads
@@ -39,7 +47,7 @@ function ProductDetails() {
           <p>${product.price}</p>
           <p>Description</p>
           <p className='details-desc'>{product.description}</p>
-          <button>Add to Cart</button>
+          <button onClick={handleAddToCart}>Add to Cart</button> {/* handle click event */}
         </div>
       </div>
     </div>
